@@ -6,6 +6,7 @@
     font-weight: 400;
     font-size: 16px;
     color: #212529;
+    box-sizing: border-box;
 }
 
 body {
@@ -69,7 +70,7 @@ body {
 .title {
     padding-top: 10px;
     padding-bottom: 10px;
-    font-family: 'Righteous', cursive;
+    font-family: 'EB Garamond', serif;
     font-size: 40px;
     margin: 0;
 }
@@ -84,15 +85,18 @@ body {
 }
 
 .cards {
+    width: fit-content;
     margin: auto;
     margin-top: 40px;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: start;
+    flex-wrap: wrap;
     gap: 30px;
 }
 
 .card {
+    width: 30%;
     display: block;
     border: 1px solid rgba(0,0,0,.125);
     border-radius: 10px;
@@ -147,34 +151,31 @@ body {
     color: #00000070;
 }
 
-.card__read-more {
-    display: flex;
-    justify-items: center;
-    justify-content: center;
-    background-color: #1C9963;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 12px;
-    text-decoration-line: none;
-    color: white;
-}
-
 
 .card__read-more {
     display: flex;
     justify-items: center;
     justify-content: center;
     background-color: #1C9963;
-    padding: 10px;
-    border-radius: 5px;
+    padding: 10px 20px;
+    border-radius: 20px;
     font-size: 14px;
     text-decoration-line: none;
     color: white;
+    outline: none;
+    border: 0;
 }
 
 .card__read-more:hover {
     background-color: #14794d;
     transition: background-color 500ms linear;
+}
+
+.centered {
+    margin: auto;
+    margin-bottom: 10vh;
+    margin-top: 10vh;
+    padding: 20px;
 }
 
 .author {
@@ -256,4 +257,50 @@ body {
 .profile__name {
     display: flex;
     align-items: center;
+}
+
+.form {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.centered > .title {
+    text-align: center;
+    width: 100%;
+}
+
+.field {
+    width: 100%;
+}
+
+.field > label {
+    color: #0000008A;
+    font-size: 12px;
+    display: block;
+}
+
+.field > input {
+    width: 100%;
+    outline: none;
+    border: 0;
+    border-bottom: 1px solid rgba(0,0,0,.15);
+    padding: 10px;
+}
+
+.field > select {
+    min-width: 100%;
+    background-color: white;
+    outline: none;
+    border: 0;
+    border-bottom: 1px solid rgba(0,0,0,.15);
+    padding: 10px;
+}
+.link {
+    color: #14794d;
+    font-size: 15px;
+    text-decoration: none;
 }
