@@ -54,6 +54,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 20px;
 }
 
 .logo {
@@ -303,4 +304,14 @@ body {
     color: #14794d;
     font-size: 15px;
     text-decoration: none;
+}
+
+.card__read-more.gray {
+    background-color: rgba(0, 0, 0, 0.041);
+    color: #1C9963;
+}
+
+.card__read-more.gray:hover {
+    background-color: rgba(0, 0, 0, 0.068);
+    transition: 0 300ms ease linear;
 }
